@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+#type {
+    /* background-color: black; */
+    color: #000;
+}
+.typed-cursor {
+    font-size: 2.5rem;
+    color: hotpink;
+}
+.hidden {
+    display: none;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.main  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    visibility: hidden;
+    /* background-color: white; */
+}
+
+.a > div {
+    min-height: 50px;
+    height: auto;
+    border-bottom: 1px solid;
+    width: 95%;
+    margin-left: 10px;
+}
+.gutter {
+    position: relative;
+    top:5%;
+    cursor: s-resize;
+    height:90%;
+    background: black;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /* z-index: 1; */
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+#heading {
+    display: flex;
+    align-items: end;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+#heading > span {
+    position: relative;
+    font-weight: 500;
+    left: 10px;
+    letter-spacing: 4px;
+    font-style: Helvetica,sans-serif;
+}
+
+/* Styling toggle button  */
+button {
+    background-color: black;
+    color: white;
+    padding:3px;
+}
+.dark {
+    background-color: black;
+    color: white;
+}
+
+ /* styling left side window individual divs  */
+#description-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.m7 {
+    margin-top: 7px;
+    font-weight: 400;
+}
+
+#description , #due-date{
+    border: none;
+    margin: 7px 2px 2px 2px;
+    background-color: transparent;
+    font-weight: 400;
+}
+
+#due-date-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+ /* dropdown menu */
+#options {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+  /* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    top:15px;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+} 
+
+#options-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-bottom: none;
+}
+
+#add , #delete {
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+
+.fas , .far {
+    margin:5px;
+}
+
+.b {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-y: scroll;
+}
+.b > div {
+    min-height: 50px ;
+    width: 70%;
+    margin-left: 10%;
+    box-shadow: 3px 3px 3px rgb(129, 129, 129);
+}
+#b-heading {
+
+    display: flex;
+    font-size: 2rem;
+    margin: 2rem 1rem;
+    box-shadow: none;
+}
+.items {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.items > span {
+    position: relative;
+    top:25%;
+}
+.description , .duedate , .category {
+    margin-left:1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+.category {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+input[type="checkbox"] {
+    margin-left:0.5rem;
+}
